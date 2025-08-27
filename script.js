@@ -1,5 +1,3 @@
-
-
 function hash(string) {
   const utf8 = new TextEncoder().encode(string);
   return crypto.subtle.digest('SHA-256', utf8).then((hashBuffer) => {
@@ -25,46 +23,6 @@ function Decode() {
     output = `Decoded: ${decoded}`
 }
 
-function darkMode() {
-    let element = document.body;
-    element.className = "dark-mode";
-}
-function lightMode() {
-    let element = document.body;
-    element.className = "light-mode";
-}
-function DarkmodeToggle() {
-    // Get the checkbox
-    var checkBox = document.getElementById("myCheck");
-    // Get the output text
-    var text = document.getElementById("text");
-    
-    // If the checkbox is checked, display the output text
-    if (checkBox.checked == true){
-        text.style.display = "block";
-        darkMode()
-    } else {
-        text.style.display = "none";
-        lightMode()
-    }
-}/*
-function DarkmodeToggle() {
-    // Get the checkbox
-    var checkBox = document.getElementById("myCheck");
-    // Get the output text
-    var text1 = document.getElementById("text1");
-    var text2 = document.getElementById("text2");
-    // If the checkbox is checked, display the output text
-    if (checkBox.checked == true){
-        text2.style.display = "none"'
-        text1.style.display = "block";
-        darkMode()
-    } else {
-        text2.style.display = "block"
-        text1.style.display = "none";
-        lightMode()
-    }
-}*/
 
 const myJSON = '{"email":"elijah1busch@gmail.com", "password":"Team406m"}';
 const myObj = JSON.parse(myJSON);
@@ -97,10 +55,6 @@ for (i = 0; i < coll.length; i++) {
         }
     });
 }
-function runPythonScript() {
-    var data = {
-    message: "Hello from HTML!"
-};
 var xhr = new XMLHttpRequest();
     xhr.open("POST", "main.py", true);
     xhr.setRequestHeader("Content-Type", "application/json");
